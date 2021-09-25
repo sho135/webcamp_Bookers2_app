@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
 
       t.text :title
       t.text :opinion
-      user_id:integer
+      user_id :integer
 
       t.timestamps
     end
