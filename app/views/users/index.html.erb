@@ -1,9 +1,17 @@
-<h1>User info</h1>
+<table>
+    <h1>Users</h1>
 
-<!--ユーザー画像-->
-
-<h4>name</h4>
-
-<h4>introduction</h4>
-
-<!--プロフ編集-->
+    <thead>
+        <h4>image</h4>
+        <h4>name</h4>
+    </thead>
+    <tbody>
+        <%= @users.each do |user| %>
+        <tr>
+            <td><%= attachment_image_tag user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></td>
+            <td><%= user.name %></td>
+            <td><%= link_to "Show", "/users/#{user.id}" %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
