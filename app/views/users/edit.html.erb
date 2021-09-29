@@ -1,5 +1,10 @@
+<!--エラー通知-->
+
+
+<!--自分のプロフィール編集画面-->
 <h1>User info</h1>
 
+<%= form_with model:@user, local:true do |f| %>
 <h4>Nme</h4>
 <%= f.text_field :name %>
 <h4>Image</h4>

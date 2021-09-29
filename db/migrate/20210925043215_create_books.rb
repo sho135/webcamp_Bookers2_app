@@ -6,7 +6,6 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.text :body
       t.integer :user_id
       t.integer :profile_image_id
-      t.integer :book_id
 
       t.timestamps
     end
