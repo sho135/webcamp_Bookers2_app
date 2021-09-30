@@ -1,6 +1,9 @@
-<!--自分の本編集-->
+<!--自分の本編集ページ-->
 <h1>Editing Book</h1>
 
+<!--エラー通知-->
+<%= render 'books/error', model: @book %>
+<!--ユーザー情報-->
 <%= render 'books/book', book: @book %>
 
 <%= link_to "Show", book_path(@book) %>
