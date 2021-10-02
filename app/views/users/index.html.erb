@@ -1,27 +1,32 @@
-<!--ユーザー情報-->
-<%= render 'users/user', user: @user %>
-
-
-<!--本新規投稿フォーム-->
-
-<%= render 'books/book', book: @book %>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <!--ユーザー情報-->
+            <%= render 'users/user', user: @user %>
+            <!--本新規投稿フォーム-->
+            <h2>New book</h2>
+            <%= render 'books/book', book: @book %>
+        </div>
 
 
 <!--Users項目:ユーザー一覧-->
-<table>
-    <h1>Users</h1>
-
-    <thead>
-        <h4>image</h4>
-        <h4>name</h4>
-    </thead>
-    <tbody>
-        <%= @users.each do |user| %>
-        <tr>
+    <table>
+      <h1>Users</h1>
+        <thead>
+          <h4>image</h4>
+          <h4>name</h4>
+        </thead>
+        <tbody>
+          <%= @users.each do |user| %>
+          <tr>
             <td><%= attachment_image_tag user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %></td>
             <td><%= user.name %></td>
             <td><%= link_to "Show", "/users/#{user.id}" %></td>
-        </tr>
+          </tr>
         <% end %>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+    </div>
+</div>
+
+
