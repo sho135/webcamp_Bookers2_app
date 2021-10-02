@@ -3,7 +3,7 @@
 
 <%= form_with model:@user, local:true do |f| %>
 <!--エラー通知-->
-<%= render 'books/error', model: @book %>
+<%= render 'books/error', model: @user %>
 
 <h4>Nme</h4>
 <%= f.text_field :name %>
