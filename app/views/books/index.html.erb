@@ -2,13 +2,16 @@
 <%= render 'books/error', model: @book %>
 
 <!--ユーザー情報-->
-<%= render 'users/user', user: @user %>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <!--ユーザー情報-->
+            <%= render 'users/user', user: @user %>
+            <!--本新規投稿フォーム-->
+            <h2>New book</h2>
+            <%= render 'books/book', book: @book %>
 
-
-<!--本新規投稿フォーム-->
-<h2>New book</h2>
-<%= render 'books/book', book: @book %>
-
+        </div>
 
 <!--Books項目:ユーザーと本-->
 <table>
@@ -32,3 +35,6 @@
         <% end %>
     </tbody>
 </table>
+    </div>
+</div>
+

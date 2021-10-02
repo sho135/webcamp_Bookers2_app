@@ -6,27 +6,36 @@
             <!--本新規投稿フォーム-->
             <h2>New book</h2>
             <%= render 'books/book', book: @book %>
-
         </div>
-        <table>
-          <div class="col-md-8 offset-md-1">
+
+        <div class="col-md-8 offset-md-1">
+            <!--ユーザーの本一覧-->
             <h1>Books</h1>
-             <%= @books.each do |book| %>
-          <tr>
-            <td>
-            <%= link_to user_path(@user) do %>
-            <%= attachment_image_tag user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %>
-            <% end %>
-            </td>
-            <td><%= link_to book.title, book_path(book.id) %></td>
-            <td><%= link_to book.body %></td>
-    </tr>
-    <% end %>
-    </div>
-    
-</table>
+        <table class="table">
+            <thead>
+                <th></th>
+                <th>Title</th>
+                <th>Opinion</th>
+                <th colspan="3"></th>
+            </thead>
+            <tbody>
+                <%= @books.each do |book| %>
+           <tr>
+             <td>
+               <%= link_to user_path(@user) do %>
+               <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg" %>
+               <% end %>
+             </td>
+             <td><%= link_to book.title, book_path(book.id) %></td>
+             <td><%= link_to book.body %></td>
+           </tr>
+              <% end %>
+            </tbody>
+
+        </table>
+          </div>
     </div>
 </div>
 
 
-<!--他ユーザーの本詳細-->
+
