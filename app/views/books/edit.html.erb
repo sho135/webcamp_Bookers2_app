@@ -1,12 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-
+            
 <!--自分の本編集ページ-->
 <h1>Editing Book</h1>
 
 <!--エラー通知-->
-<%= render 'books/error', model: @book %>
+
 <!--ユーザー情報-->
 <%= render 'books/book', book: @book %>
 
@@ -14,7 +14,7 @@
 |
 <%= link_to "Back", books_path %>
 
-
+            
         </div>
     </div>
 </div>

@@ -1,12 +1,12 @@
-<!--エラー通知-->
-<%= render 'books/error', model: @book %>
-
 <!--ユーザー情報-->
 <div class="container">
     <div class="row">
         <div class="col-3">
             <!--ユーザー情報-->
             <%= render 'users/user', user: @user %>
+
+            <!--エラー通知-->
+            <%= render 'books/error', error: @book %>
             <!--本新規投稿フォーム-->
             <h2>New book</h2>
             <%= render 'books/book', book: @book %>
@@ -17,10 +17,12 @@
         <h1>Books</h1>
           <table class="table">
             <thead>
+              <tr>
               <th></th>
               <th>Title<th>
               <th>Opinion<th>
               <th colspan="3"></th>
+              </tr>
             </thead>
             <tbody>
               <% @books.each do |book| %>

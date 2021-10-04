@@ -20,7 +20,8 @@ class BooksController < ApplicationController
       redirect_to book_path(@book)
     else
       @user = current_user
-      @book = Book.all
+      @books = Book.all
+
       render :index
     end
   end
@@ -42,10 +43,9 @@ class BooksController < ApplicationController
 
   def destroy
       @book = Book.find(params[:id])
-    if @book.destroy
+      @book.destroy
       flash[:notice]="Book was successfully destroyed."
       redirect_to books_path
-    end
   end
 
 private

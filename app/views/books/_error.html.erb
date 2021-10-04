@@ -1,7 +1,7 @@
-<!--エラ〜メッセージ-->
-<% if model.errors.any? %>
-<h3><%= @model.errors.count %> errors prohibited this obj from being saved</h3>
-  <% @model.errors.full_messages.each do |message| %>
+<!--エラーメッセージ-->
+<% if error.errors.any? %>
+  <%= error.errors.count %> errors prohibited this obj from being saved
+  <% error.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
 <% end %>
