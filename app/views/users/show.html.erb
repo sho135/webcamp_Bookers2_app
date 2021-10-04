@@ -1,13 +1,15 @@
 
 
-<div class="container">
+<div class="container px-5 px-sm-0">
     <div class="row">
-        <div class="col-3">
+        <div class="col-md-3">
             <!--ユーザー情報-->
+            <h2>User info</h2>
             <%= render 'users/user', user: @user %>
-            
+
+            <!--エラー通知-->
             <%= render 'books/error', error: @book %>
-            
+
             <!--本新規投稿フォーム-->
             <h2>New book</h2>
             <%= render 'books/book', book: @book %>
@@ -15,7 +17,7 @@
 
         <div class="col-md-8 offset-md-1">
             <!--ユーザーの本一覧-->
-        <h1>Books</h1>
+        <h2>Books</h2>
         <table class="table">
             <thead>
                 <th></th>
