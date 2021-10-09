@@ -1,6 +1,6 @@
 <!--エラーメッセージ-->
 <% if error.errors.any? %>
-  <%= error.errors.count %> errors prohibited this obj from being saved
+  <%= error.errors.count %> errors prohibited this obj from being saved:
   <% error.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
